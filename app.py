@@ -2,9 +2,27 @@ from flask import Flask, render_template
 
 app = Flask('Projeto Panther')
 
-@app.route("/")
+posts = [
+    { 
+        'author': 'Emerson',
+        'title': 'Some shit'
+    },
+    {
+        'author': 'yuri',
+        'title': 'Somese'
+    }
+
+]
+
+
+@app.route('/')
+@app.route('/home')
 def home():
-    return render_template('home.html'), 200
+    return render_template('home.html', posts=posts)
+
+@app.route("/login")
+def log():
+    return render_template('login.html'), 200
 
 @app.route('/about')
 def about():
