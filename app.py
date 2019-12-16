@@ -5,11 +5,13 @@ app = Flask('Projeto Panther')
 posts = [
     { 
         'author': 'Emerson',
-        'title': 'Some shit'
+        'title': 'Some shit',
+        'description': 'As i said some other time, it didnt work at all'
     },
     {
         'author': 'yuri',
-        'title': 'Somese'
+        'title': 'Somese',
+        'description': ' Hollow '
     }
 
 ]
