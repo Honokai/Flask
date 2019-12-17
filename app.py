@@ -2,15 +2,17 @@ from flask import Flask, render_template, url_for
 
 app = Flask('Projeto Panther')
 
-posts = [
+post = [
     { 
         'author': 'Emerson',
         'title': 'Some shit',
+        'date_posted': '12/23/2019',
         'description': 'As i said some other time, it didnt work at all'
     },
     {
         'author': 'yuri',
         'title': 'Somese',
+        'date_posted': '12/23/2019',
         'description': ' Hollow '
     }
 
@@ -20,7 +22,7 @@ posts = [
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html', title='Sorting', posts=posts)
+    return render_template('home.html', title='Sorting', post=post)
 
 @app.route("/login")
 def log():
