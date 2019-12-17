@@ -2,12 +2,12 @@
 if($_POST!=null)
     $usuario = $_POST['user'];
     $senha = $_POST['pass'];
-$conection = mysqli_connect('127.0.0.1', $usuario, $senha,'site');
+    $conection = mysqli_connect('127.0.0.1', $usuario, $senha,'site');
 if(!($conection))
     echo(mysqli_error($conection));
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="en">
 <head>
     <meta charset="UTF-8">

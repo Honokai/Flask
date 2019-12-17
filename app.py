@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 app = Flask('Projeto Panther')
 
@@ -20,7 +20,7 @@ posts = [
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html', posts=posts)
+    return render_template('home.html', title='Sorting', posts=posts)
 
 @app.route("/login")
 def log():
@@ -28,7 +28,7 @@ def log():
 
 @app.route('/about')
 def about():
-    return render_template('about.html'), 200
+    return render_template('about.html', title='About'), 200
 
 @app.route('/historia')
 def historia():
